@@ -105,3 +105,10 @@ const products = [
         description: "Fast and reliable internet connection for your home network."
     }
 ];
+
+
+const div = document.querySelector('#display')
+for(let i=0; i<products.length; i++)
+    {
+        
+    }

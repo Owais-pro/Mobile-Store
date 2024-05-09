@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+#message{
+    margin-inline: 35%;
+}
+.rounded-circle{
+    max-width: 10%;
+    margin-right: 10px;
+}
