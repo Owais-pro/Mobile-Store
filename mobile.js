@@ -1,114 +1,104 @@
-const products = [
+const phones = [
     {
-        name: "Laptop",
-        price: 999.99,
-        description: "Powerful laptop for all your computing needs."
+        brand: 'Samsung',
+        model: 'S20',
+        ram: 8,
+        rom: 256,
+        camera: '20 megapixel',
+        price: 15000
     },
     {
-        name: "Headphones",
-        price: 79.99,
-        description: "High-quality headphones for immersive audio experience."
+        brand: 'Xiomi',
+        model: 'note10',
+        ram: 4,
+        rom: 64,
+        camera: '10 megapixel',
+        price: 15000
     },
     {
-        name: "Smartphone",
-        price: 699.99,
-        description: "Advanced smartphone with cutting-edge features."
+        brand: 'Infinix',
+        model: 'z10',
+        ram: 2,
+        rom: 16,
+        camera: '5 megapixel',
+        price: 15000
     },
     {
-        name: "Tablet",
-        price: 449.99,
-        description: "Portable tablet for entertainment and productivity."
+        brand: 'Tecno',
+        model: 'spark10',
+        ram: 12,
+        rom: 512,
+        camera: '25 megapixel',
+        price: 15000
     },
     {
-        name: "Smartwatch",
-        price: 249.99,
-        description: "Stay connected and track your fitness with this smartwatch."
+        brand: 'Iphone',
+        model: '14',
+        ram: 4,
+        rom: 1024,
+        camera: '30 megapixel',
+        price: 15000
     },
     {
-        name: "Gaming Console",
-        price: 399.99,
-        description: "Experience the thrill of gaming with this powerful console."
+        brand: 'Oppo',
+        model: 'F11',
+        ram: 8,
+        rom: 256,
+        camera: '20 megapixel',
+        price: 15000
     },
     {
-        name: "Camera",
-        price: 599.99,
-        description: "Capture life's moments with stunning clarity and detail."
+        brand: 'Vivo',
+        model: 'y20',
+        ram: 4,
+        rom: 64,
+        camera: '8 megapixel',
+        price: 15000
     },
     {
-        name: "Wireless Speaker",
-        price: 129.99,
-        description: "Enjoy your favorite music wirelessly with this speaker."
+        brand: 'Samsung',
+        model: 's50',
+        ram: 50,
+        rom: 1024,
+        camera: '60 megapixel',
+        price: 300000
     },
-    {
-        name: "External Hard Drive",
-        price: 129.99,
-        description: "Expand your storage and backup your files with ease."
-    },
-    {
-        name: "Wireless Mouse",
-        price: 29.99,
-        description: "Navigate your computer with precision and comfort."
-    },
-    {
-        name: "Printer",
-        price: 199.99,
-        description: "Print documents and photos with exceptional quality."
-    },
-    {
-        name: "Desk Lamp",
-        price: 49.99,
-        description: "Illuminate your workspace with adjustable brightness."
-    },
-    {
-        name: "Fitness Tracker",
-        price: 79.99,
-        description: "Monitor your health and track your workouts."
-    },
-    {
-        name: "Bluetooth Earbuds",
-        price: 99.99,
-        description: "Wireless earbuds for on-the-go audio enjoyment."
-    },
-    {
-        name: "Portable Charger",
-        price: 39.99,
-        description: "Charge your devices anywhere, anytime."
-    },
-    {
-        name: "USB Flash Drive",
-        price: 19.99,
-        description: "Store and transfer your files conveniently."
-    },
-    {
-        name: "Monitor",
-        price: 299.99,
-        description: "Upgrade your display for enhanced productivity."
-    },
-    {
-        name: "Keyboard",
-        price: 49.99,
-        description: "Type comfortably with this reliable keyboard."
-    },
-    {
-        name: "Computer Mousepad",
-        price: 9.99,
-        description: "Enhance your mouse precision with this smooth pad."
-    },
-    {
-        name: "Graphic Tablet",
-        price: 199.99,
-        description: "Express your creativity with this digital drawing tablet."
-    },
-    {
-        name: "Wireless Router",
-        price: 79.99,
-        description: "Fast and reliable internet connection for your home network."
-    }
+
 ];
 
-
-const div = document.querySelector('#display')
-for(let i=0; i<products.length; i++)
+const cartArr = [];
+const div = document.querySelector('#display');
+const message = document.querySelector('#message')
+for(let i=0; i<phones.length; i++)
     {
-        
+        div.innerHTML += `
+        <div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h4 class="card-title">${phones[i].brand + ' ' + phones[i].model}</h4>
+    <h6 class="card-title">RAM: ${phones[i].ram}</h6>
+    <h6 class="card-title">ROM: ${phones[i].rom}</h6>
+    <h5 class="card-title">Price: ${phones[i].price}</h5>
+    <a href="#" onclick="AddCart(${i})" class="btn btn-primary">Add To Cart</a>
+  </div>
+</div>
+        `
+
     }
+    function AddCart(index){
+        
+        if(cartArr.includes(phones[index]))
+            {
+                phones[index].Quantity += 1;
+            }
+            else{
+                cartArr.push(phones[index])
+                phones[index].Quantity = 1;
+            }  
+           
+            message.style.display = 'block';
+
+    };
+   
+    
+    

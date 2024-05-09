@@ -3,8 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 #message{
     margin-inline: 35%;
+    display: none;
 }
 .rounded-circle{
     max-width: 10%;
