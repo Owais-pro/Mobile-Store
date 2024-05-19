@@ -12,3 +12,8 @@
     max-width: 10%;
     margin-right: 10px;
 }
+#imageset{
+   max-width: 90%;
+   max-height: 70%;
+   padding-top: 7px;
+}
