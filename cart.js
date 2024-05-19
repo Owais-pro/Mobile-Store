@@ -14,8 +14,8 @@ function renderItems(){
     <h4 class="card-title">${Cart_Items[i].brand + ' ' + Cart_Items[i].model}</h4>
     <h6 class="card-title">RAM: ${Cart_Items[i].ram}</h6>
     <h6 class="card-title">ROM: ${Cart_Items[i].rom}</h6>
-    <h6 class="card-title">Quantity: ${Cart_Items[i].Quantity}</h6>
     <h5 class="card-title">Price: ${Cart_Items[i].price}</h5>
+    <h6 class="card-title">Quantity: <span onclick="">+</span> ${Cart_Items[i].Quantity} <span onclick="">-</span></h6>
   </div>
 </div>`
         }

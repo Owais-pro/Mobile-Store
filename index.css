@@ -15,5 +15,11 @@
 #imageset{
    max-width: 90%;
    max-height: 70%;
-   padding-top: 7px;
+   padding-block: 7px;
+   align-self: center;
+}
+#cardContent{
+    letter-spacing: 2px;
+    background-color: blanchedalmond;
+    border: 2px solid black;
 }

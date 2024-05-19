@@ -98,8 +98,7 @@ for(let i=0; i<phones.length; i++)
         div.innerHTML += `
         <div class="card" style="width: 18rem;">
   <img src="${phones[i].image}" class="card-img-top" alt="..." id ="imageset">
-  <hr>
-  <div class="card-body">
+  <div class="card-body" id="cardContent">
     <h4 class="card-title">${phones[i].brand + ' ' + phones[i].model}</h4>
     <h6 class="card-title">RAM: ${phones[i].ram}</h6>
     <h6 class="card-title">ROM: ${phones[i].rom}</h6>
@@ -117,18 +116,18 @@ for(let i=0; i<phones.length; i++)
                 phones[index].Quantity += 1;
             }
             else{
-                cartArr.push(phones[index])
+                
                 phones[index].Quantity = 1;
+                cartArr.push(phones[index])
             }  
            
             message.style.display = 'block';
-            console.log(cartArr[index])
+            console.log(cartArr[index]);
+           const abc = localStorage.setItem('cartitem' , JSON.stringify(cartArr));
 
     };
 
    function gotoCart(){
-   
-    localStorage.setItem('cartitem' , JSON.stringify(cartArr));
     window.location = 'cart.html';
 
    };
