@@ -123,11 +123,11 @@ for(let i=0; i<phones.length; i++)
            
             message.style.display = 'block';
             console.log(cartArr[index]);
-           const abc = localStorage.setItem('cartitem' , JSON.stringify(cartArr));
 
     };
 
    function gotoCart(){
+    localStorage.setItem('cartitem' , JSON.stringify(cartArr));
     window.location = 'cart.html';
 
    };
